@@ -217,7 +217,7 @@ const Subscription = () => {
       </div>
 
       {plan && (
-        <div>
+        <div className="addons-section">
           <h3 className="section-label">
             Select add-ons for your subscription
           </h3>
@@ -236,8 +236,8 @@ const Subscription = () => {
       )}
 
       {showCardDetails && (
-        <>
-          <h3 className="section-label mt-large">Add card details</h3>
+        <div className="card-details-section">
+          <h3 className="section-label">Add card details</h3>
           <div className="card-input-box">
             <FaCreditCard className="card-icon" />
             <input
@@ -264,7 +264,6 @@ const Subscription = () => {
               onChange={handleCvcChange}
               maxLength={4}
             />
-            {/* Hidden file input for card image */}
             <input
               type="file"
               ref={fileInputRef}
@@ -277,22 +276,7 @@ const Subscription = () => {
             You will not be charged right now. Subscription will only start once
             your listing is published and live.
           </p>
-          {/* <button 
-            onClick={handleSubmit}
-            disabled={!isFormValid}
-            style={{
-              backgroundColor: isFormValid ? '#00A3AD' : '#e0e0e0',
-              color: 'white',
-              border: 'none',
-              padding: '12px 24px',
-              borderRadius: '4px',
-              cursor: isFormValid ? 'pointer' : 'not-allowed',
-              marginTop: '16px'
-            }}
-          >
-            Save Card Details
-          </button> */}
-        </>
+        </div>
       )}
 
       <div className="footer-info">
