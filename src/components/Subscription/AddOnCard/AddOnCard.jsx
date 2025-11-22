@@ -7,9 +7,10 @@ const AddOnCard = ({ label, isSelected, onToggle, isComingSoon = false }) => {
       className={`addon-card ${isSelected ? "selected" : ""}`}
       onClick={onToggle}
     >
-      <div className="addon-content">
-        {isComingSoon && <span className="tag-coming-soon">Coming soon</span>}
+      
+      {isComingSoon && <span className="tag-coming-soon">Coming soon</span>}
 
+      <div className="addon-content">
         <span className="addon-label">{label}</span>
       </div>
 

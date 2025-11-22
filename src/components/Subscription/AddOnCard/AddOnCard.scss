@@ -2,86 +2,16 @@ $color-petrol: #026786;
 $color-teal: #00a3ad;
 $color-teal-bg: #00a3ad0d;
 $color-border: #e0e0e0;
-$font-main: "MuseoSansRounded", sans-serif;
-
-.addon-card {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  width: 100%;
-  padding: 20px 24px;
-  background: #ffffff;
-  border: 1px solid $color-border;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  margin-bottom: 16px;
-  box-sizing: border-box;
-
-  &:hover {
-    border-color: $color-teal;
-  }
-
-  &.selected {
-    background: $color-teal-bg;
-    border: 1px solid $color-teal;
-
-    .selection-circle {
-      border-color: $color-teal;
-      background-color: $color-teal;
-    }
-  }
-
-  .addon-label {
-    text-align: left;
-    font-family: $font-main;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 22px;
-    letter-spacing: 0px;
-    color: $color-petrol;
-
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-  }
-
-  .tag-coming-soon {
-    font-size: 12px;
-    background: #eee;
-    color: #666;
-    padding: 2px 8px;
-    border-radius: 4px;
-    width: fit-content;
-    margin-bottom: 4px;
-    font-weight: 700;
-  }
-
-  .selection-circle {
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
-    border: 2px solid $color-teal;
-    background: transparent;
-    transition: all 0.2s;
-    flex-shrink: 0;
-  }
-}
-
-$color-petrol: #026786;
-$color-teal: #00a3ad;
-$color-teal-bg: #00a3ad0d;
-$color-border: #e0e0e0;
 $color-gray-text: #7c7c7c;
 $color-gray-bg: #e6e6e6;
 $font-main: "MuseoSansRounded", sans-serif;
 
 .addon-card {
+  position: relative;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
-
   width: 100%;
   padding: 20px 24px;
   background: #ffffff;
@@ -93,6 +23,8 @@ $font-main: "MuseoSansRounded", sans-serif;
   box-sizing: border-box;
   min-height: 72px;
 
+  overflow: visible;
+
   &:hover {
     border-color: $color-teal;
   }
@@ -107,27 +39,28 @@ $font-main: "MuseoSansRounded", sans-serif;
     }
   }
 
+  .tag-coming-soon {
+    position: absolute;
+    top: -12px;
+    left: 16px;
+
+    background-color: $color-gray-bg;
+    color: $color-gray-text;
+    font-family: $font-main;
+    font-size: 12px;
+    line-height: 1;
+    font-weight: 700;
+
+    padding: 6px 10px;
+    border-radius: 4px;
+    z-index: 10;
+  }
+
   .addon-content {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-  }
-
-  .tag-coming-soon {
-    display: inline-block;
-    background-color: $color-gray-bg;
-
-    color: $color-gray-text;
-    font-family: $font-main;
-    font-size: 12px;
-    line-height: 14px;
-    text-align: left;
-    letter-spacing: 0px;
-
-    padding: 4px 8px;
-    border-radius: 4px;
-    margin-bottom: 8px;
   }
 
   .addon-label {
@@ -136,7 +69,6 @@ $font-main: "MuseoSansRounded", sans-serif;
     font-weight: 500;
     font-size: 20px;
     line-height: 22px;
-    letter-spacing: 0px;
     color: $color-petrol;
   }
 
