@@ -1,0 +1,108 @@
+@import "./styles/variables.scss";
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-size: 14px;
+  font-family: "MuseoSansRounded", sans-serif;
+  background-color: #fcfcfc;
+}
+
+.app-layout {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #fcfcfc;
+}
+
+.main-container {
+  display: flex;
+  flex: 1;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  height: calc(100vh - 80px);
+}
+
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+}
+
+.page-scroll-area {
+  flex: 1;
+  height: 100%;
+  overflow-y: auto;
+  padding-bottom: 100px;
+
+  scroll-behavior: smooth;
+
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 3px;
+  }
+}
+
+.sticky-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #ffffff;
+  border-top: 1px solid #eee;
+  padding: 16px 40px;
+  display: flex;
+  justify-content: flex-end;
+  z-index: 50;
+
+  .btn-next {
+    width: 300px;
+    height: 60px;
+    background: #fecd06;
+    color: #026786;
+    border: none;
+    border-radius: 4px;
+    font-family: "MuseoSansRounded", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .main-container {
+    height: calc(100vh - 60px);
+  }
+
+  .sticky-footer {
+    padding: 12px 20px;
+    position: fixed;
+    bottom: 0;
+
+    .btn-next {
+      width: 100%;
+      height: 50px;
+    }
+  }
+
+  .page-scroll-area {
+    padding: 0 20px 100px 20px;
+  }
+}

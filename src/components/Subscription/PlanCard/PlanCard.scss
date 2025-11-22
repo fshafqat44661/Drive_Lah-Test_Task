@@ -1,0 +1,101 @@
+$color-petrol: #026786;
+$color-text-gray: #4a4a4a;
+$color-teal: #00a3ad;
+$color-teal-bg: #00a3ad0d;
+$font-main: "MuseoSansRounded", sans-serif;
+
+.plan-card {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 20px;
+  margin-right: 20px;
+  width: 100%;
+  max-width: 397px;
+  min-height: 196px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+  position: relative;
+  background: #fcfcfc;
+
+  &:hover {
+    border-color: $color-teal;
+  }
+
+  &.selected {
+    background: $color-teal-bg;
+    border: 1px solid $color-teal;
+  }
+
+  .card-title {
+    text-align: left;
+    font-family: $font-main;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 27px;
+    letter-spacing: 0px;
+    color: $color-petrol;
+    margin-bottom: 12px;
+  }
+
+  .features-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-grow: 1;
+
+    li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      margin-bottom: 8px;
+
+      img {
+        width: 12px;
+        height: auto;
+        margin-top: 4px;
+      }
+
+      span {
+        text-align: left;
+        font-family: $font-main;
+        font-size: 15px;
+        line-height: 18px;
+        letter-spacing: 0px;
+        color: $color-text-gray;
+      }
+    }
+  }
+
+  .price-container {
+    margin-top: 12px;
+    text-align: left;
+    display: flex;
+    align-items: baseline;
+    gap: 2px;
+
+    .amount {
+      text-align: right;
+      font-family: $font-main;
+      font-weight: 900;
+      font-size: 22px;
+      line-height: 27px;
+      letter-spacing: 0px;
+      color: $color-petrol;
+    }
+
+    .period {
+      text-align: left;
+      font-family: $font-main;
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 17px;
+      letter-spacing: 0px;
+      color: $color-petrol;
+    }
+  }
+}

@@ -1,0 +1,41 @@
+@import "./variables.scss";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+
+  background-color: #fcfcfc;
+  font-family: "MuseoSansRounded", sans-serif;
+}
+
+.btn-primary {
+  background-color: var(--color-secondary);
+  color: var(--color-text-dark);
+  border: none;
+  padding: 12px 40px;
+  font-weight: 600;
+  font-size: 16px;
+  border-radius: var(--radius);
+  cursor: pointer;
+  float: right;
+  margin-top: 20px;
+  min-width: 150px;
+
+  &:hover {
+    opacity: 0.9;
+  }
+}
